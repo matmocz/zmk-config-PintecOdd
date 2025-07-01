@@ -54,13 +54,13 @@
                 compatible = "zmk,output-behavior-listener";
 
                 /* only enable in layer(s) */
-                layers = (DEFAULT RAISE);
+                layers = <DEFAULT RAISE>;
 
                 /* only enable for these subscribed stated event(s) */
-                sources = (
+                sources = <
                         OUTPUT_SOURCE_LAYER_STATE_CHANGE
                         OUTPUT_SOURCE_KEYCODE_STATE_CHANGE
-                );
+                        >;
 
                 /* setup output behavior to output two phase vibration or LED animation */
                 bindings = < &ob_erm0_in &ob_erm0_out >;
