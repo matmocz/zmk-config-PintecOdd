@@ -244,17 +244,5 @@
                 positional;
         };
 
-        keymap {
-                compatible = "zmk,keymap";
-                default_layer {
-                        bindings = <
-                                ... &mo 1 ...
-                        >;
-                };
-                raise_layer {
-                        bindings = <
-                                ... &trans ...
-                        >;
-                };
-       };
+        
 };
