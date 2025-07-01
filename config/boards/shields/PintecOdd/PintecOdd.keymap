@@ -118,7 +118,7 @@
         /* setup listener on enter raise layer */
         erm0_obl__enter_raise_layer {
                 compatible = "zmk,output-behavior-listener";
-                layers = < RAISE >;
+                layers = < &raise_layer >;
                 sources = < OUTPUT_SOURCE_LAYER_STATE_CHANGE >;
                 bindings = < &ob_erm0_in &ob_erm0_out >;
         };
