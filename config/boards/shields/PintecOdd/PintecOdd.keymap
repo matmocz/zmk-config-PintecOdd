@@ -141,7 +141,7 @@
         /* setup listener on enter raise to Spotlight in macOS */
         kp_spotlight_on_enter_cfg_layer {
                 compatible = "zmk,output-behavior-listener";
-                layers = < RAISE >;
+                layers = <&raise_layer>;
                 sources = < OUTPUT_SOURCE_LAYER_STATE_CHANGE >;
 
                 /* to trigger press CMD-SPACE and release after 30ms */
@@ -154,7 +154,7 @@
         /* setup listener on press key on position 0 */
         erm0_obl__press_position_0 {
                 compatible = "zmk,output-behavior-listener";
-                layers = < DEFAULT >;
+                layers = < &default_layer >;
                 sources = < OUTPUT_SOURCE_POSITION_STATE_CHANGE >;
 
                 /* set position of switch to bind to */
@@ -165,7 +165,7 @@
         /* setup listener on press keycode 'D' */
         erm0_obl__press_key_code_D {
                 compatible = "zmk,output-behavior-listener";
-                layers = < DEFAULT >;
+                layers = < &default_layer  >;
                 sources = < OUTPUT_SOURCE_KEYCODE_STATE_CHANGE >;
 
                 /* set keycode filter here */
@@ -176,7 +176,7 @@
         /* setup listener on press keycode 'Q', and feedback via LRA */
         erm0_obl__press_key_code_Q {
                 compatible = "zmk,output-behavior-listener";
-                layers = < DEFAULT >;
+                layers = < &default_layer  >;
                 sources = < OUTPUT_SOURCE_KEYCODE_STATE_CHANGE >;
 
                 /* set keycode filter here */
@@ -191,7 +191,7 @@
         /* setup listener on press keycode 'Q', and feedback via LRA */
         pwm0_obl__press_key_code_P {
                 compatible = "zmk,output-behavior-listener";
-                layers = < DEFAULT >;
+                layers = < &default_layer >;
                 sources = < OUTPUT_SOURCE_KEYCODE_STATE_CHANGE >;
 
                 /* set keycode filter here */
@@ -206,7 +206,7 @@
         /* setup listener on press mouse button 1, and feedback via LRA */
         led1_obl__press_mouse_btn_1 {
                 compatible = "zmk,output-behavior-listener";
-                layers = < DEFAULT >;
+                layers = < &default_layer> ;
                 sources = < OUTPUT_SOURCE_MOUSE_BUTTON_STATE_CHANGE >;
 
                 /* trigger on mouse button 1 status change */
@@ -222,7 +222,7 @@
         /* usually, no feedback from scrolling on touchpad or trackball, this config adds haptic feedback to emulate notchy bump from physical scroll wheel */
         led1_obl__press_mouse_whl_1 {
                 compatible = "zmk,output-behavior-listener";
-                layers = < DEFAULT >;
+                layers = < &default_layer >;
                 /* trigger on mouse wheel status change */
                 sources = < OUTPUT_SOURCE_MOUSE_WHEEL_STATE_CHANGE >;
                 bindings = < &ob_erm0_in >;
@@ -231,7 +231,7 @@
         /* setup listener to read HID report from host app, and reflect volume value on motorized fader */
         fader_transport {
                 compatible = "zmk,output-behavior-listener";
-                layers = <DEFAULT>;
+                layers = <&default_layer>;
                 /* trigger on RAW HID report */
                 sources = <OUTPUT_SOURCE_TRANSPORT>;
                 bindings = <&ob_fader_motor>;
