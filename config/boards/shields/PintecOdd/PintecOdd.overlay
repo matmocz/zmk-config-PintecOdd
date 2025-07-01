@@ -61,24 +61,4 @@
 		#binding-cells = <0>;
 		pwms = <&pwm0 0 PWM_MSEC(20) PWM_POLARITY_NORMAL>;
 	};
-
-        /* setup motorized fader */
-        fader_motor0: fader_motor_0 {
-		compatible = "zmk,output-motorized-fader";
-		#binding-cells = <0>;
-                
-                /* define `zmk-analog-input-driver` device to track the position of fader via ADC pin */
-                sensor-device = <&anin0>;
-                sensor-channel = <0>;
-
-                /* choose drv883x as the motor driver */
-                motor-driver-device = <&drv883x_0>;
-                motor-driver = "drv883x";
-                /* alternative motor driver option */
-                // motor-driver-device = <&tb6612fng_0>;
-                // motor-driver = "tb6612fng";
-
-                /* motor output channel, both drivers have 2 channel 0/1 */
-                motor-channel = <0>;
-	};
 };
