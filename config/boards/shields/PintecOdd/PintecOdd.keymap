@@ -248,7 +248,7 @@
                 compatible = "zmk,keymap";
                 default_layer {
                         bindings = <
-                                ... &mo &raise_layer ...
+                                ... &mo 1 ...
                         >;
                 };
                 raise_layer {
