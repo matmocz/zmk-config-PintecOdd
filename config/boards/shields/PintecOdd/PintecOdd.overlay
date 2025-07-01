@@ -55,16 +55,6 @@
 		control-gpios = <&pro_micro 21 GPIO_ACTIVE_HIGH>;
 	};
 
-        /* assign feedback device from actual DRV2605 i2c device */
-	lra0: output_haptic_fb_0 {
-		compatible = "zmk,output-haptic-feedback";
-		#binding-cells = <0>;
-                /* only one driver type is supported now */
-		driver = "drv2605";
-                /* labled i2c device with [zmk-drv2605-driver] */
-		device = <&drv2605_0>;
-	};
-
         /* setup wired PWM device to control a LED */
 	pwm_led0: output_pwm_0 {
 		compatible = "zmk,output-pwm";
