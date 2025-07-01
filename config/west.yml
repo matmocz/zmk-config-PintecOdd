@@ -9,11 +9,13 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-      name: zmk-output-behavior-listener
-      remote: zmkfirmware
-      revision: main
-    - name: zmk-drv2605-driver
-      remote: zmkfirmware
-      revision: main
   self:
     path: config
+manifest:
+  projects:
+    - name: zmk-output-behavior-listener
+      remote: badjeff
+      revision: main
+    - name: zmk-drv2605-driver
+      remote: badjeff
+      revision: main
