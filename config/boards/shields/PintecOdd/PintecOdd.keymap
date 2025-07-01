@@ -88,7 +88,7 @@
                 force = <7>;
         };
 
-        ob_lra0: ob_generic_lra0_in {
+        ob_lra0: ob_generic_lra1_in {
                 compatible = "zmk,output-pwm"; #binding-cells = <0>;
                 device = <&pwm_led0>;
 
