@@ -126,7 +126,7 @@
         /* setup listener on back to default layer from another layer */
         erm0_obl__back_to_default_layer {
                 compatible = "zmk,output-behavior-listener";
-                layers = < DEFAULT >;
+                layers = < &default_layer >;
                 sources = < OUTPUT_SOURCE_LAYER_STATE_CHANGE >;
                 
                 /* optional, to catch the state becomes negative boolean on state_changed */
