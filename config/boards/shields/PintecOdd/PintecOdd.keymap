@@ -133,7 +133,7 @@
                 invert-state;
                 
                 /* optional, specify a layer which is leaving from */
-                position = < RAISE >;
+                position = <&raise_layer>;
 
                 bindings = < &ob_erm0_out >;
         };
