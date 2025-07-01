@@ -91,14 +91,4 @@
                 /* motor output channel, both drivers have 2 channel 0/1 */
                 motor-channel = <0>;
 	};
-    &i2c1 {
-    status = "okay";
-
-    drv2605_0: drv2605@5a {
-        compatible = "ti,drv2605";
-        reg = <0x5a>;  // or whatever your I2C address is
-        label = "DRV2605_0";
-        // any required bindings go here
-    };
-};
 };
