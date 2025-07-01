@@ -54,7 +54,7 @@
                 compatible = "zmk,output-behavior-listener";
 
                 /* only enable in layer(s) */
-                layers = <DEFAULT RAISE>;
+                layers = < &default_layer &raise_layer >;
 
                 /* only enable for these subscribed stated event(s) */
                 sources = <
