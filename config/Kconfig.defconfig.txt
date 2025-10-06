@@ -1,6 +1,0 @@
-if SHIELD_PINTEC
-
-config ZMK_KEYBOARD_NAME
-    default "pintec"
-
-endif
